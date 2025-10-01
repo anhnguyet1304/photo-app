@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Photo Journal</string>
+    <string name="title_activity_main">Photo Journal</string>
+    <string name="package_name">com.photojournal.app</string>
+    <string name="custom_url_scheme">com.photojournal.app</string>
+</resources>
