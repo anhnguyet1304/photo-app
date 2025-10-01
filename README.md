@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# 📸 Photo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ứng dụng **Photo App** giúp lưu trữ, quản lý và hiển thị ảnh cá nhân.  
+Dự án được xây dựng bằng **React + Vite** và triển khai đa nền tảng qua **Capacitor** (Android/iOS).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Yêu cầu môi trường
 
-## React Compiler
+Trước khi bắt đầu, hãy chắc chắn rằng bạn đã cài đặt:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Node.js** (phiên bản >= 16)
+- **npm** (đi kèm với Node.js) hoặc **yarn**
+- **Git**
+- **Capacitor CLI** (`npm install @capacitor/cli -g`)
+- (Tuỳ chọn) **Android Studio** – để build & chạy Android
+- (Tuỳ chọn) **Xcode** – để build & chạy iOS (chỉ trên macOS)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📥 Cài đặt dự án
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Clone dự án về máy:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/anhnguyet1304/photo-app.git
+cd photo-app
 ```
+Cài đặt dependencies:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+# 🖥️ Chạy ứng dụng Web (development)
+```bash
+npm run dev
+```
+Ứng dụng sẽ chạy tại: http://localhost:5173
+
+# 📦 Build dự án (production)
+```bash
+
+npm run build
+```
+Kết quả build nằm trong thư mục dist/.
+
+Xem trước bản build:
+
+```bash
+
+npm run preview
+```
+# 📱 Chạy ứng dụng trên Android/iOS với Capacitor
+1. Đồng bộ build ra Capacitor
+```bash
+npx cap sync
+```
+2. Chạy trên Android
+```bash
+npx cap open android
+```
+Ứng dụng sẽ mở bằng Android Studio. Bạn có thể build và chạy trên thiết bị ảo (AVD) hoặc điện thoại thật.
+
+3. Chạy trên iOS
+```bash
+npx cap open ios
+```
+Ứng dụng sẽ mở bằng Xcode. Bạn có thể build và chạy trên iPhone Simulator hoặc thiết bị thật (cần Apple Developer account).
