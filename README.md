@@ -3,6 +3,16 @@
 Ứng dụng **Photo App** giúp lưu trữ, quản lý và hiển thị ảnh cá nhân.  
 Dự án được xây dựng bằng **React + Vite** và triển khai đa nền tảng qua **Capacitor** (Android/iOS).
 
+- Tính năng chính
+Chụp và chọn ảnh: Sử dụng camera hoặc thư viện thiết bị
+Ghi chú ảnh: Thêm tiêu đề mô tả cho mỗi bức ảnh
+Lưu trữ cục bộ: Ảnh và thông tin được lưu ngay trên thiết bị
+Thư viện ảnh: Xem album dưới dạng lưới hoặc danh sách
+Tìm kiếm nhanh: Lọc ảnh theo tiêu đề
+Quản lý ảnh: Sửa tiêu đề, xoá ảnh không cần thiết
+Chia sẻ dễ dàng: Gửi ảnh qua các ứng dụng khác
+Thống kê: Theo dõi số lượng ảnh theo thời gian
+Đa nền tảng: Hỗ trợ chạy trên Web, Android và iOS
 ---
 
 ## 🚀 Yêu cầu môi trường
